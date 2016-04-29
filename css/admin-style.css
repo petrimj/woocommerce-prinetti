@@ -1,0 +1,66 @@
+#pe_lisatiedot {
+    display: none;
+
+}
+
+#pe_lisatiedot input {
+    text-align: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#mp_lisatiedot {
+    display: none;
+    margin-top: 5px;
+    margin-left: 10px;
+    padding-bottom: 7px;
+}
+
+#prinetti_integraatio input[type='text'] {
+    width: 100%;
+}
+
+
+.service-header {
+    display: block;
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+
+.prinetti_input_error {
+    border-left: solid 4px #dd3d36 !important;
+}
+
+.prinetti_input_error_message td {
+    vertical-align: top;
+}
+
+.label_created_notification {
+    font-size: 11px;
+    color: #999;
+}
+
+.created_label {
+    border-left: solid 4px #005fb3;
+    padding-left: 5px;
+    margin-bottom: 6px;
+}
+
+#created_labels {
+    margin-top: 15px;
+}
+
+.prinetti_additional_service {
+    padding-left: 12px;
+}
+
+#pmj_prinetti_submit {
+    margin-top: 12px;
+}
+
+#erilliskasiteltava_lisatiedot {
+	display: none;
+    margin-top: 5px;
+    margin-left: 10px;
+    padding-bottom: 7px;
+}

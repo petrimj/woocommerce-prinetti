@@ -1,0 +1,179 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Prinetti-integraatio by Petri Mäki-"
+"Jaakkola\n"
+"POT-Creation-Date: 2015-05-05 17:35+0200\n"
+"PO-Revision-Date: 2015-05-05 17:39+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: classes/class-woocommerce-prinetti-integration.php:24
+msgid "Prinetti"
+msgstr "Prinetti"
+
+#: classes/class-woocommerce-prinetti-integration.php:25
+msgid "Settings for WooCommerce Prinetti integration"
+msgstr "Prinetti lisäosan asetukset"
+
+#: classes/class-woocommerce-prinetti-integration.php:47
+msgid "Routing Account"
+msgstr "Lähettäjän tunnus"
+
+#: classes/class-woocommerce-prinetti-integration.php:49
+msgid "Give the routing account number given by Posti"
+msgstr "Anna Postilta saamasi salainen tunnus (en. Routing Account)"
+
+#: classes/class-woocommerce-prinetti-integration.php:55
+msgid "Secret Key"
+msgstr "Salainen avain"
+
+#: classes/class-woocommerce-prinetti-integration.php:58
+msgid "Secret key"
+msgstr "Salainen avain"
+
+#: classes/class-woocommerce-prinetti-integration.php:62
+msgid "Sender name"
+msgstr "Lähettäjän nimi"
+
+#: classes/class-woocommerce-prinetti-integration.php:68
+msgid "Sender name 2"
+msgstr "Lähettäjän nimi 2"
+
+#: classes/class-woocommerce-prinetti-integration.php:74
+#: views/order-page-wrapper.php:17
+msgid "Address 1"
+msgstr "Osoite 1"
+
+#: classes/class-woocommerce-prinetti-integration.php:80
+#: views/order-page-wrapper.php:22
+msgid "Address 2"
+msgstr "Osoite 2"
+
+#: classes/class-woocommerce-prinetti-integration.php:86
+#: views/order-page-wrapper.php:26
+msgid "Postalcode"
+msgstr "Postinumero"
+
+#: classes/class-woocommerce-prinetti-integration.php:92
+#: views/order-page-wrapper.php:32
+msgid "City"
+msgstr "Postitoimipaikka"
+
+#: classes/class-woocommerce-prinetti-integration.php:98
+msgid "BIC-code"
+msgstr "BIC-koodi"
+
+#: classes/class-woocommerce-prinetti-integration.php:101
+msgid "BIC-koodi postiennakoiden tilitystä varten"
+msgstr "BIC-koodi postiennakoiden tilitystä varten"
+
+#: classes/class-woocommerce-prinetti-integration.php:105
+msgid "IBAN-number"
+msgstr "IBAN-tilinumero"
+
+#: classes/class-woocommerce-prinetti-integration.php:108
+msgid "Tilinumero IBAN-muodossa postiennakoiden tilitystä varten"
+msgstr "Tilinumero IBAN-muodossa postiennakoiden tilitystä varten"
+
+#: classes/class-woocommerce-prinetti-integration.php:112
+msgid "Test mode"
+msgstr "Testitila"
+
+#: classes/class-woocommerce-prinetti-integration.php:114
+msgid "Enable testing mode"
+msgstr "Ota käyttöön testitila"
+
+#: classes/class-woocommerce-prinetti-integration.php:116
+msgid "If checked, test mode is active"
+msgstr "Jos valittu, testitila on aktiivinen"
+
+#: classes/class-woocommerce-prinetti-order-page.php:62
+msgid "Label created: "
+msgstr "Osoitekortti luotu: "
+
+#: classes/class-woocommerce-prinetti-order-page.php:63
+msgid "Tracking code sent: "
+msgstr "Seurantatunnus lähetetty: "
+
+#: classes/class-woocommerce-prinetti-order-page.php:65
+msgid "no"
+msgstr "ei"
+
+#: classes/class-woocommerce-prinetti.php:140
+msgid "Error on processing the request"
+msgstr "Virhe pyynnön käsittelyssä"
+
+#: classes/class-woocommerce-prinetti.php:175
+msgid "Track your parcel by clicking the following link: "
+msgstr "Seuraa lähetystä: "
+
+#: views/order-page-wrapper.php:8
+msgid "Recipient name"
+msgstr "Vastaanottaja"
+
+#: views/order-page-wrapper.php:13
+msgid "Company"
+msgstr "Yritys"
+
+#: views/order-page-wrapper.php:36
+msgid "Phone"
+msgstr "Puhelin"
+
+#: views/order-page-wrapper.php:40
+msgid "Email"
+msgstr "Sähköposti"
+
+#: views/order-page-wrapper.php:47
+msgid "Service"
+msgstr "Palvelu"
+
+#: views/order-page-wrapper.php:53
+msgid "Economy 16"
+msgstr "Economy 16"
+
+#: views/order-page-wrapper.php:58
+msgid "Express Business Day 14"
+msgstr "Express Business Day 14"
+
+#: views/order-page-wrapper.php:63
+msgid "Express Flex 21"
+msgstr "Express Flex 21"
+
+#: views/order-page-wrapper.php:70
+msgid "Additional services"
+msgstr "Lisäpalvelut"
+
+#: views/order-page-wrapper.php:76
+msgid "Cash on delivery"
+msgstr "Postiennakko"
+
+#: views/order-page-wrapper.php:79
+msgid "Amount"
+msgstr "Summa"
+
+#: views/order-page-wrapper.php:84
+msgid "Multiple parcels"
+msgstr "Monipaketti"
+
+#: views/order-page-wrapper.php:106
+msgid "Create label"
+msgstr "Luo osoitekortti"
+
+#~ msgid "Syötä Postilta saamasi lähettäjän tunnus (en. Routing Account)"
+#~ msgstr "Syötä Postilta saamasi lähettäjän tunnus (en. Routing Account)"
+
+#~ msgid "Postilta saamasi salainen tunnus"
+#~ msgstr "Postilta saamasi salainen tunnus"
