@@ -10,6 +10,7 @@ if (!defined('ABSPATH')) {
  * Version:         0.1.0
  * Author:          Petri Mäki-Jaakkola
  * Author URI:      http://www.makijaakkola.fi
+ * License:         GPLv2 or later
  * Text Domain:     woocommerce-prinetti
  * Domain Path:     /languages
  */
