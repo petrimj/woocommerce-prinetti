@@ -20,7 +20,6 @@
     width: 100%;
 }
 
-
 .service-header {
     display: block;
     margin-top: 6px;
@@ -59,7 +58,7 @@
 }
 
 #erilliskasiteltava_lisatiedot {
-	display: none;
+    display: none;
     margin-top: 5px;
     margin-left: 10px;
     padding-bottom: 7px;

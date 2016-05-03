@@ -10,14 +10,12 @@ if (!defined('ABSPATH')) {
 
 if (!class_exists('WooCommerce_Prinetti_Integration')) :
 
-    class WooCommerce_Prinetti_Integration extends WC_Integration
-    {
+    class WooCommerce_Prinetti_Integration extends WC_Integration {
 
         /**
          * Init and hook in the integration.
          */
-        public function __construct()
-        {
+        public function __construct() {
             global $woocommerce;
 
             $this->id = 'woocommerce-prinetti';
@@ -40,8 +38,7 @@ if (!class_exists('WooCommerce_Prinetti_Integration')) :
         /**
          * Initialize integration settings form fields.
          */
-        public function init_form_fields()
-        {
+        public function init_form_fields() {
             $this->form_fields = array(
                 'routing_account' => array(
                     'title' => __('Routing Account', 'woocommerce-prinetti'),
@@ -57,8 +54,8 @@ if (!class_exists('WooCommerce_Prinetti_Integration')) :
                     'default' => '',
                     'description' => __('Secret key', 'woocommerce-prinetti'),
                 ),
-                
-                    'routing_source' => array(
+
+                'routing_source' => array(
                     'title' => __('Routing Source', 'woocommerce-prinetti'),
                     'type' => 'decimal',
                     'description' => __('Give the routing source number given by Posti', 'woocommerce-prinetti'),
@@ -117,11 +114,11 @@ if (!class_exists('WooCommerce_Prinetti_Integration')) :
                 ),
 
                 'testmode' => array(
-                    'title'             => __( 'Test mode', 'woocommerce-prinetti' ),
-                    'type'              => 'checkbox',
-                    'label'             => __( 'Enable testing mode', 'woocommerce-prinetti' ),
-                    'default'           => 'no',
-                    'description'       => __( 'If checked, test mode is active', 'woocommerce-prinetti' ),
+                    'title' => __('Test mode', 'woocommerce-prinetti'),
+                    'type' => 'checkbox',
+                    'label' => __('Enable testing mode', 'woocommerce-prinetti'),
+                    'default' => 'no',
+                    'description' => __('If checked, test mode is active', 'woocommerce-prinetti'),
                 ),
             );
         }

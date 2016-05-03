@@ -21,8 +21,7 @@ require_once plugin_dir_path(__FILE__) . 'classes/class-woocommerce-prinetti.php
 /**
  * Begins the plugin execution
  */
-function run_woocommerce_prinetti()
-{
+function run_woocommerce_prinetti() {
 
     $wcprinetti = new WooCommerce_Prinetti;
     $wcprinetti->run();
@@ -31,8 +30,7 @@ function run_woocommerce_prinetti()
 run_woocommerce_prinetti();
 
 // This will be executed when the plugin is activated in the admin panel
-function woocommerce_prinetti_activate_plugin()
-{
+function woocommerce_prinetti_activate_plugin() {
     // Changes to the database
     global $wpdb;
 
@@ -51,7 +49,8 @@ function woocommerce_prinetti_activate_plugin()
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
     dbDelta($sql);
 }
-register_activation_hook( __FILE__, "woocommerce_prinetti_activate_plugin");
+
+register_activation_hook(__FILE__, "woocommerce_prinetti_activate_plugin");
 
 function woocommerce_prinetti_deactivate_plugin() {
 
@@ -61,13 +60,14 @@ function woocommerce_prinetti_deactivate_plugin() {
     $table_name = $wpdb->prefix . 'woocommerce_prinetti';
     $sql = "DROP TABLE $table_name;";
 
-   // $wpdb->query($sql);
-   
-   delete_option('woocommerce_woocommerce-prinetti_settings');
+    // $wpdb->query($sql);
+
+    delete_option('woocommerce_woocommerce-prinetti_settings');
 
 }
-register_deactivation_hook( __FILE__, 'woocommerce_prinetti_deactivate_plugin' );
 
-register_uninstall_hook( 'uninstall.php', "woocommerce_prinetti_uninstall_plugin");
+register_deactivation_hook(__FILE__, 'woocommerce_prinetti_deactivate_plugin');
 
-load_plugin_textdomain('woocommerce-prinetti', false, basename( dirname( __FILE__ ) ) . '/languages' );
+register_uninstall_hook('uninstall.php', "woocommerce_prinetti_uninstall_plugin");
+
+load_plugin_textdomain('woocommerce-prinetti', false, basename(dirname(__FILE__)) . '/languages');

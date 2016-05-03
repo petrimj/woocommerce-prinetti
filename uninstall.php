@@ -5,8 +5,7 @@ if (!defined('WP_UNINSTALL_PLUGIN'))
     exit();
 
 
-function woocommerce_prinetti_uninstall_plugin()
-{
+function woocommerce_prinetti_uninstall_plugin() {
 
 // Undo all database changes
     global $wpdb;

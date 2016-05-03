@@ -3,15 +3,13 @@ if (!defined('ABSPATH')) {
     exit;
 } // Exit if accessed directly
 
-class WooCommerce_Prinetti
-{
+class WooCommerce_Prinetti {
 
     protected $loader;
     protected $plugin_slug;
     protected $version;
 
-    public function __construct()
-    {
+    public function __construct() {
         $this->plugin_slug = 'woocommerce-prinetti';
         $this->version = '0.1.0';
 
@@ -24,8 +22,7 @@ class WooCommerce_Prinetti
      * Load all dependencies
      *
      */
-    private function load_dependencies()
-    {
+    private function load_dependencies() {
 
         require_once plugin_dir_path(dirname(__FILE__)) . 'classes/class-woocommerce-prinetti-loader.php';
         require_once plugin_dir_path(dirname(__FILE__)) . 'classes/class-woocommerce-prinetti-order-page.php';
@@ -38,8 +35,7 @@ class WooCommerce_Prinetti
     /**
      *
      */
-    public function init_wc_integration()
-    {
+    public function init_wc_integration() {
 
         // Checks if WooCommerce is installed.
         if (class_exists('WC_Integration')) {
@@ -60,15 +56,13 @@ class WooCommerce_Prinetti
      * @param $integrations
      * @return array
      */
-    public function add_integration($integrations)
-    {
+    public function add_integration($integrations) {
         $integrations[] = 'WooCommerce_Prinetti_integration';
         return $integrations;
     }
 
 
-    private function define_admin_hooks()
-    {
+    private function define_admin_hooks() {
         $orderpageForm = new WooCommerce_Prinetti_Order_Page();
         $this->loader->add_action('admin_enqueue_scripts', $orderpageForm, 'enqueue_styles');
         $this->loader->add_action('add_meta_boxes', $orderpageForm, 'add_meta_box');
@@ -78,15 +72,13 @@ class WooCommerce_Prinetti
         $this->loader->add_action('plugins_loaded', $this, 'init_wc_integration');
     }
 
-    public function run()
-    {
+    public function run() {
         $this->loader->run();
 
 
     }
 
-    public function get_version()
-    {
+    public function get_version() {
         return $this->version;
     }
 
@@ -95,8 +87,7 @@ class WooCommerce_Prinetti
      * die() is mandatory, otherwise redirects to admin-ajax.php and returns 0
      *
      */
-    function pmj_process_ajax()
-    {
+    function pmj_process_ajax() {
 
         if (!isset($_POST['pmj_nonce']) || !wp_verify_nonce($_POST['pmj_nonce'], 'pmj-nonce'))
             return;
@@ -108,7 +99,7 @@ class WooCommerce_Prinetti
         $order_id = $params['post_ID'];
 
         $options = get_option('woocommerce_woocommerce-prinetti_settings');
-        
+
 
         $shipment = new Prinetti_Shipment($params, $options);
         $shipment->createXML();
@@ -136,9 +127,9 @@ class WooCommerce_Prinetti
 
         } else {
 
-            $error_message  = '<div class="error">';
+            $error_message = '<div class="error">';
             $error_message .= '<table class="prinetti_input_error_message">';
-            $error_message .= '<tr><td colspan="2"><strong>' . __('Error on processing the request', 'woocommerce-prinetti') .'</strong></td></tr>';
+            $error_message .= '<tr><td colspan="2"><strong>' . __('Error on processing the request', 'woocommerce-prinetti') . '</strong></td></tr>';
             $error_message .= '<tr><td>' . $result['error_status'] . '</td><td>' . $result['error_message'] . '</td></tr>';
             $error_message .= '</table>';
             $error_message .= '</div>';
@@ -152,8 +143,7 @@ class WooCommerce_Prinetti
         die();
     }
 
-    function add_tracking_code()
-    {
+    function add_tracking_code() {
 
         global $wpdb, $post;
         $table_name = $wpdb->prefix . 'woocommerce_prinetti';
@@ -175,7 +165,6 @@ class WooCommerce_Prinetti
 
                 echo(_e('<br>Track your parcel by clicking the following link: ', 'woocommerce-prinetti') . '<br>');
                 echo('<a href="http://www.posti.fi/itemtracking/posti/search_by_shipment_id?lang=fi&ShipmentId=' . $tracking_code->trackingcode . '"">' . $tracking_code->trackingcode . '</a>');
-
 
 
             }

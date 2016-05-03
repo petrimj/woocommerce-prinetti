@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) {
     exit;
 } // Exit if accessed directly ?>
 <div class="wrap">
-	
+
     <form id="pmj_prinetti_form" action="" method="post">
 
         <input placeholder="<?php _e('Recipient name', 'woocommerce-prinetti'); ?>" type="text"
@@ -81,11 +81,11 @@ if (!defined('ABSPATH')) {
                            name="postiennakko_summa"
                            value="<?php echo $tilaus->order_total; ?>">
                 </div>
-                
+
                 <input type="checkbox" id="mp_checkbox" name="monipaketti" value="3102"/>
                 <span><?php _e('Multiple parcels', 'woocommerce-prinetti'); ?></span><br/>
-                
-                
+
+
                 <div id="mp_lisatiedot">
                     <fieldset>
                         <label for="mpcount_1">
@@ -102,14 +102,14 @@ if (!defined('ABSPATH')) {
                         </label><br>
                     </fieldset>
                 </div>
-                
-                
+
+
                 <input type="checkbox" id="erilliskasiteltava_checkbox" name="erilliskasiteltava" value="3104"/>
                 <span><?php _e('Erilliskäsiteltävä', 'woocommerce-prinetti'); ?></span>
-                
+
                 <div id="erilliskasiteltava_lisatiedot">
-	                <fieldset>
-		                <label for="ercount_1">
+                    <fieldset>
+                        <label for="ercount_1">
                             <input id="ercount_1" type="radio" name="er_count" value="1" checked="checked">
                             <span>1</span>
                         </label><br>
@@ -127,7 +127,7 @@ if (!defined('ABSPATH')) {
                         </label><br>
                     </fieldset>
                 </div>
-                
+
             </div>
         </div>
     </form>

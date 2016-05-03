@@ -3,21 +3,18 @@ if (!defined('ABSPATH')) {
     exit;
 } // Exit if accessed directly
 
-class WooCommerce_Prinetti_Order_Page
-{
+class WooCommerce_Prinetti_Order_Page {
 
     protected $version;
     protected $table_name;
 
-    public function __construct()
-    {
+    public function __construct() {
         global $wpdb;
         $this->table_name = $wpdb->prefix . 'woocommerce_prinetti';
 
     }
 
-    public function enqueue_styles()
-    {
+    public function enqueue_styles() {
         wp_enqueue_style(
             'pmj_prinetti_admin_styles',
             plugins_url('woocommerce-prinetti/css/admin-style.css'));
@@ -30,8 +27,7 @@ class WooCommerce_Prinetti_Order_Page
 
     }
 
-    public function add_meta_box()
-    {
+    public function add_meta_box() {
 
         add_meta_box(
             'prinetti_integraatio',
@@ -42,8 +38,7 @@ class WooCommerce_Prinetti_Order_Page
             'default');
     }
 
-    public function render_meta_box()
-    {
+    public function render_meta_box() {
 
         global $wpdb;
         $order_id = $_GET['post'];
@@ -53,8 +48,7 @@ class WooCommerce_Prinetti_Order_Page
         require_once plugin_dir_path(dirname(__FILE__)) . 'views/order-page-wrapper.php';
     }
 
-    public function generate_created_tracking_codes($tracking_codes)
-    {
+    public function generate_created_tracking_codes($tracking_codes) {
         foreach ($tracking_codes as $tracking_code) {
 
 
@@ -73,8 +67,7 @@ class WooCommerce_Prinetti_Order_Page
         }
     }
 
-    public function refresh_created_labels_ajax()
-    {
+    public function refresh_created_labels_ajax() {
 
         if (!isset($_POST['pmj_nonce']) || !wp_verify_nonce($_POST['pmj_nonce'], 'pmj-nonce'))
             return;
